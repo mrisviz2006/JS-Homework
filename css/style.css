@@ -1,0 +1,776 @@
+body{
+    margin: 0 0;
+}
+@font-face {
+    font-family: 'ALS Hauss';
+    src: url('https://www.raiffeisen.ru/common/new/images/fonts/ALS_Hauss-Medium.woff') format('woff');,
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'ALS Hauss Regular';
+    src: url('https://www.raiffeisen.ru/common/new/images/fonts/ALS_Hauss-Regular.woff') format('woff');,
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('https://www.raiffeisen.ru/common/new/images/fonts/Navigo-Bold-Web.woff') format('woff');
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+#page {
+    display: flex;
+    flex-flow: column;
+    height: 1018px;
+    background: #FFFFFF;
+}
+
+#header{
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    height: 80px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-personal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-logo{
+    height: 32px;
+    padding: 24px 0 24px 32px;
+    cursor: pointer;
+}
+
+.header-fio{
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+    color: #2B2D33;
+    padding: 29px 12px 29px 0;
+}
+
+.header-image{
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
+}
+
+.header-close {
+    height: 24px;
+    width: 24px;
+    padding: 30px 35px 30px 28px;
+}
+
+#title{
+    width: 1030px;
+    height: 300px;
+    border-radius: 32px;
+    background: #CFF1E9;
+    display: flex;
+    justify-content: space-between;
+    margin: 48px auto 0;
+}
+
+.title-info{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    padding-left: 48px;
+}
+
+.title-event {
+    height: 22px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 40px;
+}
+
+.title-event-info{
+    display: flex;
+    flex-flow: column;
+    padding-top: 24px;
+}
+
+.title-name{
+    width: 418px;
+    height: 56px;
+    font-family: 'Navigo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    align-items: center;
+    color: #2B2D33;
+}
+
+.title-date{
+    width: 209px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    align-items: center;
+    color: #2B2D33;
+    padding-top: 12px;
+}
+
+.title-button{
+    align-items: center;
+    width: 197px;
+    height: 48px;
+    background: #2B2D33;
+    border-radius: 8px;
+    font-family: 'ALS Hauss', serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 32px;
+    margin-bottom: 44px;
+}
+
+.title-button-text{
+    width: 149px;
+    height: 26px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.roketman {
+    /*position: absolute;*/
+    /*right: 50px;*/
+}
+
+.cloud {
+    transform: rotate(-2.9deg);
+    padding-top: 200px;
+    padding-right: 5px;
+}
+
+#table-content{
+    width: 1030px;
+    height: 22px;
+    left:205px;
+    top:476px;
+    display: flex;
+    gap: 32px;
+    flex-flow: column;
+    border-radius: 32px;
+    justify-content: space-between;
+    margin: 56px auto 0
+}
+
+#title-table{
+    width: 279px;
+    height: 40px;
+    font-family: 'Navigo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #2B2D33;
+}
+
+.table-chips{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 32px;
+    cursor: pointer;
+}
+
+.table-chips-selected{
+    padding: 5px 16px;
+    border-radius: 16px;
+    font-family: 'ALS Hauss', serif;
+    font-weight: 500;
+    font-size: 14px;;
+    line-height: 22px;
+    background: #2B2D33;
+    color: #FFFFFF;
+}
+
+.table-chip{
+    padding: 5px 16px;
+    border-radius: 16px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    background: #F4F4F4;
+    color: #2B2D33;
+}
+
+#table{
+    display: flex;
+    flex-flow: column;
+    /*width: 1030px;*/
+    height: 90px;
+}
+
+.table-row{
+    /*width: 1030px;*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.table-event{
+    display: flex;
+    flex-flow: column;
+    width: 442px;
+    background: #FFFFFF;
+}
+
+.table-event-date{
+    width: 109px;
+    height: 46px;
+    font-family: 'ALS Hauss Regular', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2B2D33;
+    padding: 12px 8px;
+}
+
+.table-event-data-text{
+    width: 78px;
+    height: 22px;
+}
+
+.table-event-name{
+    /*width: 426px;*/
+    color: #2B2D33;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 12px 8px 0  8px;
+}
+
+.table-event-info {
+    width: 426px;
+    color: #AAABAD;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 4px 8px 12px 8px;
+}
+
+.table-event-like{
+    display: flex;
+    gap: 5px;
+    width: 84px;
+    background: #FFFFFF;
+}
+
+.table-event-like-image{
+    height: 12px;
+    width: 12px;
+    padding: 17px 0 60px 9px;
+}
+
+.table-event-like-count{
+    width: 22px;
+    height: 22px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 12px 43px 56px 0;
+}
+
+.table-event-author{
+    display: flex;
+    flex-direction: column;
+    width: 193px;
+    height: 90px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    background: #FFFFFF;
+
+}
+
+.table-event-author span{
+    width: 177px;
+    height: 44px;
+    padding: 12px 43px 34px 8px;
+}
+
+.table-row a{
+    color: #00A5BC;
+    text-decoration: none;
+    text-align: center;
+}
+
+.table-event-registry {
+    width: 202px;
+    background: #FFFFFF;
+}
+
+.table-event-registry{
+    align-items: flex-start;
+    padding: 12px 8px 0 15px;
+}
+
+.table-event-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 179px;
+    height: 36px;
+    border: 2px solid #D5D5D6;
+    border-radius: 8px;
+    background: #FFFFFF;
+}
+
+.table-event-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 179px;
+    height: 36px;
+    border: 2px solid #D5D5D6;
+    border-radius: 8px;
+    background: #FFFFFF;
+}
+
+.button-disable {
+    cursor: auto; 
+}
+
+.table-event-text-active{
+    width: 139px;
+    height: 22px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2B2D33;
+}
+
+.table-event-text{
+    width: 139px;
+    height: 22px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(43, 45, 51, 0.24);
+}
+
+#form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 600px;
+    height: 610px;
+    /* Brand / White */
+    background: #FFFFFF;
+    /* XL */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    margin-left: 420px;
+    margin-top: 204px;
+    z-index: 1;
+}
+
+form {
+    padding: 32px;
+}
+
+.form-header{
+    width: 536px;
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+}
+.form-header-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header-title{
+    width: 492px;
+    font-family: 'Navigo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #2B2D33;
+    gap: 12px;
+}
+
+.form-header-title-info{
+    width: 492px;
+    font-family: 'ALS Hauss Regular', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #808185;
+}
+
+.form-close{
+    width: 12px;
+    height: 12px;
+    padding-left: 27px;
+}
+
+.form-content{
+    width: 536px;
+    height: 126px;
+    margin-top: 24px;
+    background: #F4F4F4;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.from-content-title{
+    padding: 24px 66px 0 24px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #2B2D33;
+}
+
+.form-content-info{
+    width: 446px;
+    padding-left: 24px;
+    padding-bottom: 24px;
+    font-family: 'ALS Hauss Regular', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #AAABAD;
+}
+
+.form-chips{
+    width: 311px;
+    height: 36px;
+    padding-top: 24px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-chips-selected{
+    padding: 5px 16px;
+    border-radius: 16px;
+    font-family: 'ALS Hauss', serif;
+    font-weight: 500;
+    font-size: 14px;;
+    line-height: 22px;
+    background: #2B2D33;
+    color: #FFFFFF;
+}
+
+.form-chip{
+    padding: 5px 16px;
+    border-radius: 16px;
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    background: #F4F4F4;
+    color: #2B2D33;
+}
+
+.form-user-info{
+    width: 536px;
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 24px;
+}
+
+.form-label{
+    width: 536px;
+    font-family: 'ALS Hauss Regular', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #808185;
+}
+
+.form-input{
+    box-sizing: border-box;
+    width: 536px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D6;
+    border-radius: 8px;
+    padding-left: 12px;
+}
+
+.form-input::placeholder {
+    height: 22px;
+    padding: 7px 0;
+    font-family: 'ALS Hauss Regular', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #AAABAD;
+}
+
+.form-comment{
+    width: 536px;
+    height: 102px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 24px;
+}
+
+.from-textarea{
+    box-sizing: border-box;
+    width: 536px;
+    height: 80px;
+    border: 1px solid #D5D5D6;
+    border-radius: 8px;
+    resize: none;
+    padding: 7px 12px;
+}
+
+.from-textarea::placeholder {
+    font-family: 'ALS Hauss Regular', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #AAABAD;
+}
+
+.form-button{
+    display: flex;
+    gap: 4px;
+    padding-top: 24px;
+    width: 536px;
+    height: 36px;
+}
+
+.form-button-registration{
+    width: 179px;
+    height: 36px;
+    background: #FEE600;
+    border-radius: 8px;
+    padding: 7px 20px 7px 20px;
+    margin-right: 16px;
+}
+
+.from-button-close{
+    border: none;
+    background: none;
+}
+
+.from-button-text{
+    font-family: 'ALS Hauss', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2B2D33;
+}
+
+@media screen and (max-width:1024px){
+    #title{
+        width: 960px;
+        margin: 48px auto 32px;
+    }
+    .roketman {
+        position: relative;
+        right: 68px;
+        width: 540px;
+        height: 480px;
+    }
+    #table-content{
+        width: 960px;
+        margin: 48px auto 32px;
+    }
+    
+    .table-event{
+        width: 356px;
+    }
+    .table-event-name {
+        width: 356px;
+    }
+}
+
+@media screen and (max-width:800px){
+    #title{
+        width: 736px;
+        margin: 48px auto 32px;
+    }
+    #table-content{
+        width: 736px;
+        margin: 48px auto 32px;
+    }
+    .table-event{
+        width: 334px;
+    }
+    .table-event-author{
+        display: none;
+    }
+    .roketman {
+        position: relative;
+        right: 190px;
+        height: 432px;
+        width: 479px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #title{
+        width: 416px;
+        height: 190px;
+        margin: 24px auto 0;
+    }
+    .title-info{
+        padding: 24px 0 0 24px;
+        display: block;
+    }
+    .title-event-info{
+        padding-top: 12px;
+    }
+    .title-name{
+        height: auto;
+        font-family: 'Navigo', serif;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .title-date{
+        font-family: 'ALS Hauss', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .title-event{
+        width: 172px;
+        height: 22px;
+        font-family: 'ALS Hauss', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .title-button {
+        width: 164px;
+        height: 32px;
+        align-items: center;
+        background: #2B2D33;
+        border-radius: 8px;
+        font-family: 'ALS Hauss', serif;
+        color: #FFFFFF;
+        font-size: 16px;
+        margin: 12px 0 24px
+    }
+    .title-button-text {
+        font-family: 'ALS Hauss', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .roketman{
+        display: none;
+    }
+    .cloud{
+        display: none;
+    }
+    #table-content{
+        width: 416px;
+        margin: 16px auto 0;
+        gap: 16px
+    }
+    #table{
+        width: auto;
+        height: auto;
+        flex-flow: column;
+    }
+    .table-row{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .table-event-date{
+        padding:0;
+        width: auto;
+        height: auto;
+    }
+    .table-event{
+        order:2;
+    }
+    .table-event-name{
+        width: 416px;
+        padding: 4px 0 0 0;
+    }
+   .table-event-info{
+       width: 416px;
+       padding: 4px 0 0 0;
+   }
+   .table-event-like {
+      order: 1;
+       padding: 0;
+   }
+   .table-event-like-image{
+       padding: 0;
+   }
+    .table-event-author{
+        display: none;
+    }
+   .table-event-like-count{
+       display: none;
+   }
+   .table-event-registry{
+       order: 4;
+       padding: 0;
+   }
+       
+}
