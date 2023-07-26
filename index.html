@@ -8,17 +8,12 @@
     <title>Title</title>
     <script src="js/mock.js"></script>
     <script src="js/getData.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/renderList.js"></script>
+    <script src="js/api.js"></script>
     <script type="application/javascript">
-        function showFrom() {
-            let form = document.getElementById('form');
-            form.setAttribute('style', 'visibility: visible');
-        }
-
-        function closeFrom() {
-            let form = document.getElementById('form');
-            form.setAttribute('style', 'visibility: hidden');
-        }
-        console.log(getEvents())
+        // console.log(getEvents())
+        getData(renderTable);
     </script>
 </head>
 <body>
@@ -53,72 +48,6 @@
                 <span class="table-chip">Остальные</span>
             </div>
             <div id="table">
-                <div class="table-row">
-                    <span class="table-event-date">
-                        <span class="table-event-data-text">25.05.2020</span>
-                    </span>
-                    <span class="table-event">
-                        <span class="table-event-name">Веницианский карнавал танцев и богохульных плясок: смотрим вместе</span>
-                        <span class="table-event-info">К посещению приглашаются сотрудники 19+</span>
-                    </span>
-                    <span class="table-event-like"><img class="table-event-like-image" src="image/like.svg" alt=""><span class="table-event-like-count">11</span></span>
-                    <span class="table-event-author">
-                        <span>
-                            <a href="#">Иннокентий Жданов</a>
-                            <a href="#">Поликарпий Осипов</a>
-                        </span>
-                    </span>
-                    <span class="table-event-registry"><button class="table-event-button button-disable"><p class="table-event-text">Зарегистрироваться</p></button></span>
-                </div>
-                <div class="table-row">
-                     <span class="table-event-date">
-                        <span class="table-event-data-text">25.05.2020</span>
-                    </span>
-                    <span class="table-event">
-                        <span class="table-event-name">Солнцестоим вместе или как провести выходные продуктивно</span>
-                        <span class="table-event-info">Если вы люите солнце и стоять - то данный курс вам очень подойдет. Мы вместе будем стоять и смотреть на солнце. Чистый кайф.</span>
-                    </span>
-                    <span class="table-event-like"><img class="table-event-like-image" src="image/like.svg" alt=""><span class="table-event-like-count">110</span></span>
-                    <span class="table-event-author">
-                        <span><a href="#">Николай Острецов</a></span>
-                    </span>
-                    <span class="table-event-registry">
-                        <button class="table-event-button" onclick="showFrom()">
-                            <p class="table-event-text-active">Зарегистрироваться</p>
-                        </button>
-                    </span>
-                </div>
-                <div class="table-row">
-                    <span class="table-event-date">
-                        <span class="table-event-data-text">25.05.2020</span>
-                    </span>
-                    <span class="table-event">
-                        <span class="table-event-name">Бредовые макеты и как с ним работать: спитч о проблемах друзей-фронтендеров</span>
-                        <span class="table-event-info">Что делать если в дизайне, который вам отправил дизайнер написаны бредовые тексты? Посмеяться?! Это что для вас шуточки?!</span>
-                    </span>
-                    <span class="table-event-like">
-                        <img class="table-event-like-image" src="image/like.svg" alt="">
-                        <span class="table-event-like-count">110</span>
-                    </span>
-                    <span class="table-event-author">
-                        <span><a href="#">Акакий Шопский</a></span>
-                    </span>
-                    <span class="table-event-registry"><button class="table-event-button button-disable"><p class="table-event-text">Зарегистрироваться</p></button></span>
-                </div>
-                <div class="table-row">
-                     <span class="table-event-date">
-                        <span class="table-event-data-text">25.05.2020</span>
-                    </span>
-                    <span class="table-event">
-                        <span class="table-event-name">Аукцион: лоснящаяся шкура золотого дракона Монина. Что скрывается в повале офиса Нагатино?</span>
-                        <span class="table-event-info">Если у вас еще осталась зарплата - приходите, мы будем рады ее забрать</span>
-                    </span>
-                    <span class="table-event-like"><img class="table-event-like-image" src="image/like.svg" alt=""><span class="table-event-like-count">11</span></span>
-                    <span class="table-event-author">
-                        <span><a href="#">Иван Стручков</a></span>
-                    </span>
-                    <span class="table-event-registry"><button class="table-event-button" onclick="showFrom()"><p class="table-event-text-active">Зарегистрироваться</p></button></span>
-                </div>
             </div>
         </div>
     </div>
@@ -129,7 +58,7 @@
                     <span class="form-header-title">Запись на мероприятия</span>
                     <span class="form-header-title-info">Выберите необходимые параметры мероприятия</span>
                 </div>
-                <img class="form-close" onclick="closeFrom()" src="image/Path.svg" alt=""/>
+                <img class="form-close" onclick="closeForm()" src="image/Path.svg" alt=""/>
             </div>
             <div class="form-content">
                 <span class="from-content-title">Веницианский карнавал танцев и богохульных плясок: смотрим вместе</span>
@@ -149,7 +78,7 @@
             </div>
             <div class="form-button">
                 <button class="form-button-registration"><span class="from-button-text">Зарегистрироваться</span></button>
-                <button class="from-button-close" onclick="closeFrom()"><span class="from-button-text">Отменить</span></button>
+                <button class="from-button-close" onclick="closeForm()"><span class="from-button-text">Отменить</span></button>
             </div>
         </form>
     </div>
