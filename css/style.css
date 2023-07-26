@@ -240,6 +240,8 @@ a {
     justify-content: center;
 }
 
+.table-row a { display: block }
+
 .table-event{
     display: flex;
     flex-flow: column;
